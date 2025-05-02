@@ -1,0 +1,245 @@
+/* StatusPreview.css */
+
+.status-preview-dialog {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .status-preview-dialog .MuiDialog-paper {
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 600px;
+    width: 100%;
+    margin: 16px;
+    background-color: #fafafa;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .status-preview-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    color: #888;
+    gap: 20px;
+  }
+  
+  .status-preview-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    color: #f05d38;
+  }
+  
+  .error-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .back-button {
+    background-color: #f05d38;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .back-button:hover {
+    background-color: #e04d28;
+    transform: translateY(-2px);
+  }
+  
+  .status-preview-header {
+    background: linear-gradient(to right, #222, #333);
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .user-avatar {
+    width: 40px !important;
+    height: 40px !important;
+    border: 2px solid #0ce370;
+  }
+  
+  .user-avatar-icon {
+    width: 40px;
+    height: 40px;
+    color: #ccc;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-details h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .time-elapsed {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #ccc;
+    gap: 5px;
+  }
+  
+  .time-icon {
+    font-size: 14px;
+  }
+  
+  .close-preview-button {
+    color: white !important;
+    font-size: 24px;
+  }
+  
+  .status-preview-content {
+    position: relative;
+  }
+  
+  .status-image-container {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .status-preview-image {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+  }
+  
+  .status-caption {
+    padding: 20px;
+    background-color: white;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.5;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .status-preview-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: white;
+    align-items: center;
+  }
+  
+  .status-actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: #555;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+  }
+  
+  .like-button:hover {
+    background-color: rgba(240, 93, 56, 0.1);
+    color: #f05d38;
+  }
+  
+  .like-button.liked {
+    color: #f05d38;
+  }
+  
+  .action-icon {
+    font-size: 18px;
+  }
+  
+  .heart-filled {
+    color: #f05d38;
+  }
+  
+  .owner-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-button, .delete-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .edit-link {
+    text-decoration: none;
+  }
+  
+  .edit-button {
+    background-color: #0ce370;
+    color: white;
+  }
+  
+  .edit-button:hover {
+    background-color: #0ab55e;
+    transform: translateY(-2px);
+  }
+  
+  .delete-button {
+    background-color: #f05d38;
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #e04d28;
+    transform: translateY(-2px);
+  }
+  
+  /* Animation for dialog appearance */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .MuiDialog-paper {
+    animation: fadeIn 0.3s ease-out forwards;
+  }
